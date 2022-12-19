@@ -1,0 +1,47 @@
+.auth-nav {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    @include centered(block, flex-start, center);
+    margin-left: auto;
+    padding: 21px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include centered(flex, flex-start, center);
+    margin-left: auto;
+  }
+}
+
+.auth-nav__item {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+ @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+        margin-right: 50px;
+      }
+ }
+}
+
+.auth-nav__link {
+  @include centered(flex, flex-start, center);
+  font-weight: 500;
+  line-height: 1.4px;
+  letter-spacing: 0.02em;
+  color: $silver-color;
+  padding: 0;
+  @include animation(color);
+
+  &:hover {
+    color: $second-color;
+  }
+}
+
+.auth-nav__icon {
+  margin-right: 10px;
+  fill: currentColor;
+  background-size: cover;
+}

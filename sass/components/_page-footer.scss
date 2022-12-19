@@ -1,0 +1,218 @@
+/*Підвал сайту*/
+.footer {
+    background-color: $bg-color-second;
+    padding: 60px 0;
+}
+
+.footer__container {
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width:768px) {
+        max-width: 768px;
+        width: 100%;
+        flex-wrap: wrap;
+        @include centered(flex, center, baseline)
+    }
+
+    @media screen and (min-width:1200px) {
+        max-width: 1200px;
+        width: 100%;
+    }
+}
+
+.footer__address-block {
+    text-align: center;
+
+    // display: inline-block;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 60px;
+        margin-right: 165px;
+    }
+}
+
+.address-block__list {
+    margin-top: 20px;
+}
+
+.address-block__item {
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        &:not(:last-child) {
+            margin-bottom: 9px;
+        }
+    }
+}
+
+.logo__text {
+    &--blue {
+        color: $second-color;
+    }
+
+    &--white {
+        color: $bg-color-main;
+    }
+}
+
+.address-block__location {
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $bg-color-main;
+}
+
+.address-block__mail,
+.address-block__tel {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.address-block__list {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+    }
+}
+
+//Блок приєднуйтесь
+.footer__join-up {
+    display: inline-block;
+    width: 206px;
+    height: 80px;
+    text-align: center;
+    margin-bottom: 60px;
+
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: auto;
+        margin-left: auto;
+
+    }
+}
+
+.footer__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $bg-color-main;
+    margin-bottom: 20px;
+}
+
+.join-up__list {
+    @include centered(flex, center, center);
+}
+
+.join-up__item {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.join-up__social-link {
+    @include centered(flex, center, center);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: $bg-color-main;
+    @include animation(background-color);
+
+    &:hover,
+    &:focus {
+        background-color: $second-color;
+    }
+}
+
+.join-up__social-icon {
+    @include centered(flex, center, center);
+    fill: currentColor;
+}
+
+//Підписка
+.footer__subscription {
+    text-align: center;
+}
+
+.footer__text {
+    display: block;
+
+    @media screen and (min-width: 1200px) {
+        text-align-last: left;
+    }
+}
+
+.subscription__input {
+    max-width: 450px;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+            width: 450px;
+            margin-right: 0;  
+        }
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+        margin-bottom: 0;
+    }
+
+    height: 50px;
+    padding-left: 16px;
+    margin-right: 12px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: #2F303A;
+    font-size: 16px;
+    line-height: calc(20/16);
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    outline: none;
+
+    &::placeholder {
+        font-size: 16px;
+        line-height: calc(20/16);
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.subscription__btn {
+    @include centered(flex, center, center);
+    margin-left: auto;
+    margin-right: auto;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        margin-left: 10px;
+        width: 24px;
+        height: 24px;
+        background-image: url(../images/send.svg);
+    }
+}
+
+.subscription__wrapper {
+    @media screen and (min-width:1200px) {
+        @include centered(flex, center, baseline);
+
+    }
+}
